@@ -91,6 +91,7 @@ systemctl enable --now dbus
 printf 'klipper ALL=(ALL) NOPASSWD: ALL\n' > /etc/sudoers.d/klipper-bootstrap
 chmod 440 /etc/sudoers.d/klipper-bootstrap
 visudo -cf /etc/sudoers.d/klipper-bootstrap
+install -d -o klipper -g klipper /home/klipper/printer_data
 install -d -o klipper -g klipper /home/klipper/printer_data/{config,logs,gcodes,comms,systemd,database}
 runuser -u klipper -- bash <<'USER'
 set -Eeuo pipefail
