@@ -81,7 +81,7 @@ apt-get install -y --no-install-recommends \
   ca-certificates curl git unzip nginx sudo python3 python3-venv python3-dev \
   build-essential libffi-dev libncurses-dev pkg-config libusb-1.0-0-dev \
   gcc-arm-none-eabi binutils-arm-none-eabi libnewlib-arm-none-eabi \
-  dbus policykit-1 iproute2
+  dbus polkitd pkexec iproute2
 if ! id klipper >/dev/null 2>&1; then
   useradd --create-home --shell /bin/bash klipper
 fi
